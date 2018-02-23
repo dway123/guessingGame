@@ -1,3 +1,8 @@
+## A simple guessing game written in bash
+
+#Guess how many files are in the directory until you succeed
+# https://www.coursera.org/learn/unix/
+
 function guess
 {
 	local amtFiles=$(ls | wc -w)
@@ -15,8 +20,8 @@ function guess
 		echo "Too low!" > /dev/tty
 		echo -1
 	else
-		echo 0
 		echo "Correct!" > /dev/tty
+		echo 0
 	fi	
 }
 
